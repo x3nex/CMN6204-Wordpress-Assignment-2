@@ -74,7 +74,7 @@ Again: Please do not fail to submit the project on time, as it will prevent you 
 - Do the same for 404 page. No need to echo page content, since it is a 404 page.
 - Do the same for `single-category.html` page. No need to edit anything. This template file must be named exactly `category.php`. We will explain this further in class. No need to edit the file for now.
 - Do the same for `portfolio-item.html` and name the template file exactly `single.php`. We will explain this further in class. Replace content with real content.
-- Bonus task: (NOT mandatory) Find a way to shorten content to excerpt. Write a custom function that does this.
+- Bonus task: (NOT mandatory) Find a way to shorten content to a length of 180 character excerpt. Write a custom function that does this.
 - MANDATORY: Verify that everything works as specified.
 - Open up a pull request, and select me (`markomitranic`) as the review delegate in the right sidebar menu on the pull request page.
 
