@@ -7,9 +7,9 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/popper/popper.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/wp-content/themes/portfolio/vendor/jquery/jquery.min.js"></script>
+    <script src="/wp-content/themes/portfolio/vendor/popper/popper.min.js"></script>
+    <script src="/wp-content/themes/portfolio/vendor/bootstrap/js/bootstrap.min.js"></script>
 
   </body>
 

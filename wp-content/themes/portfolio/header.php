@@ -30,8 +30,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-          
+            <li>
               <?php wp_nav_menu(['theme_location' => 'main'])  ?>
+            </li>
+              
          <!--    
             <li>
               <a href="about.html">Home</a>
