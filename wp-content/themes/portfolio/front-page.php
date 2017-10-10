@@ -12,9 +12,9 @@
         <div class="col-lg-6">
           <?= the_content(); ?>
         </div>
-        <div class="col-lg-6 content">
+        <!-- <div class="col-lg-6 content">
           <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-        </div>
+        </div> -->
       </div>
       <!-- /.row -->
 
