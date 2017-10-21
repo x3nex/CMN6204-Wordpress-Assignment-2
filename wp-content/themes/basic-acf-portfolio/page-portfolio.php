@@ -1,8 +1,9 @@
 <?php 
 /* Template Name: Portfolio */
 
-get_header(); ?>
-
+get_header();
+the_post();
+?>
     <!-- Page Content -->
     <div class="container">
 
@@ -18,8 +19,14 @@ get_header(); ?>
         <li class="breadcrumb-item active">Services</li>
       </ol>
 
+    <?php
+      $image = get_field('hero_image');
+    ?>
+
+
+
       <!-- Image Header -->
-      <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
+      <img class="img-fluid rounded mb-4" src="<?= $image ?> " alt="">
 
       <!-- Marketing Icons Section -->
       <div class="row">

@@ -32,5 +32,7 @@ function custom_styles(){
 	wp_enqueue_style('modern-business');
 }
 
+//$name, $width, $hight, $crop
+add_image_size('Porfolio Featured', 700, 450, true);
 
 
