@@ -19,17 +19,21 @@
         <li class="breadcrumb-item active">Portfolio Item</li>
       </ol>
 
+  
       <!-- Portfolio Item Row -->
       <div class="row">
 
         <div class="col-md-8">
-          <img class="img-fluid" src="http://placehold.it/750x500" alt="">
+          <?php
+            $url = get_field('featured_image')['sizes']['medium_large'];
+            $alt = get_field('fetured_image')['alt'];
+          ?>
         </div>
 
         <div class="col-md-4">
          <?php 
 
-          $content = get_t_content();
+          $content = get_the_content();
           // excerpt($content, 50);
 
          ?>
