@@ -30,7 +30,7 @@
          <?php 
 
           $content = get_t_content();
-          excerpt($content, 50);
+          // excerpt($content, 50);
 
          ?>
         </div>
