@@ -1,7 +1,8 @@
-**/node_modules
-/wp-config.php
-*.htaccess
-Thumbs.db
+wp-config.php
+node_modules
+.htaaccess
+.DS_Store
+Thuhmbs.db
 Desktop.ini
 *.ink
 *.log
