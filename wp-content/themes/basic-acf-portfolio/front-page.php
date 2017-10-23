@@ -1,6 +1,44 @@
 <?php get_header(); ?>
 <?php the_post(); ?>
 
+   <header>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+       <!--  
+        <?php
+          $image = get_field('carousel_image')['size']['large'];
+          $title = get_field('slide_title');
+          $description = get_field('slide_description');
+        ?>
+
+        <?php foreach (get_field('slider') as $slide); ?> -->
+
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url('<?= $image ?>');
+            <div class="carousel-caption d-none d-md-block">
+              <h3><?=$title ?></h3>
+              <p><?= $description?></p>
+            </div>
+          </div>
+          
+
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </header>
+
     <!-- Page Content -->
     <div class="container">
 
@@ -12,9 +50,9 @@
         <div class="col-lg-6">
           <?= the_content(); ?>
         </div>
-        <!-- <div class="col-lg-6 content">
+        <div class="col-lg-6 content">
           <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-        </div> -->
+        </div>
       </div>
       <!-- /.row -->
 

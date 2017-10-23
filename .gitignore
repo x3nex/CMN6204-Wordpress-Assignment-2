@@ -5,4 +5,8 @@ node_modules
 Thuhmbs.db
 Desktop.ini
 *.ink
+<<<<<<< HEAD
 *.log
+=======
+.log
+>>>>>>> 2e348d14a2f75feee1002f4c3666a9d22cb2fbd1
