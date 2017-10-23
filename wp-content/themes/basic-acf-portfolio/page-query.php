@@ -123,13 +123,74 @@
 	echo '<h1>Task #6</h1>';
 
 	$query = new WP_Query([
+		'post_type' => 'page',
+		'pagename' => 'sandbox'
+	]);
+
+	while($query->have_posts()) {
+		$query->the_post();
+		echo the_author_id();
+		echo '<br>';
+	}
+
+
+	echo '<h1>Task #7</h1>';
+
+	$query = new WP_Query([
+		'post_type' => 'page',
+		'pagename' => 'sandbox'
+	]);
+
+	while($query->have_posts()) {
+		$query->the_post();
+		echo the_author_id();
+		echo '<br>';
+	}
+
+
+
+
+
+
+
+
+
+	echo '<h1>Task #8</h1>';
+
+	$query = new WP_Query([
 		'post_type' => 'post',
-		'pagename' => 'page-query'
+		'category_in' => 'websites',
+		'posts_per_page' => -1,
+		'orderby' => 'title',
+		'order' => 'ASC',
 	]);
 
 	while($query->have_posts()) {
 		$query->the_post();
 		echo the_title();
+		echo '<br>';
+	}
+
+	
+	echo '<h1>Task #9</h1>';
+
+	$query = new WP_Query([
+		'post_type' => 'post',
+		'posts_per_page' => -1,
+		'orderby' => 'title',
+		'order' => 'ASC',
+	]);
+
+	while($query->have_posts()) {
+		$query->the_post();
+		echo '<ol>';
+		echo the_title();
+			echo '<li>';
+			echo get_author_name();
+			echo '<br>';
+			echo the_date();
+			echo '</li>';
+		echo '</ol>';
 		echo '<br>';
 	}
 

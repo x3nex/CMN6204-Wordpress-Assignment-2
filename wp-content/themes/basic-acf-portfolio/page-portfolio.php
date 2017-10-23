@@ -19,9 +19,7 @@ the_post();
         <li class="breadcrumb-item active">Services</li>
       </ol>
 
-    <!-- <?php
-      $image = get_field('hero_image');
-    ?> -->
+
 
 
 
@@ -30,6 +28,21 @@ the_post();
 
       <!-- Marketing Icons Section -->
       <div class="row">
+
+        <?php $query = new WP_Quert([
+        'post_type' => 'post'
+
+        ]);
+
+        while ($query->posts()) {
+          $query->the_post();
+          the_title();
+          echo '<br>';
+        }
+
+        wp_reset_postdata();
+
+        ?>
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
             <h4 class="card-header">Card Title</h4>
