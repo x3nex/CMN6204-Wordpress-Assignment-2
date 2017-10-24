@@ -134,25 +134,20 @@
 	}
 
 
-	echo '<h1>Task #7</h1>';
-
-	$query = new WP_Query([
-		'post_type' => 'page',
-		'pagename' => 'sandbox'
+	echo "<h1>Task #7</h1>";
+	
+	$posts = new WP_Query([
+	'post-type' => 'page',
+	'pagename' => 'sandbox',
 	]);
-
-	while($query->have_posts()) {
-		$query->the_post();
-		echo the_author_id();
-		echo '<br>';
+	
+	while ($posts->have_posts()) {
+		$posts->the_post();
+		$author_id = get_the_author_meta('ID');
+		$user_info = get_user_by('id', $author_id);
+	
+		echo 'Name: ' . $user_info->display_name . ' <br> ' . 'Email: ' . $user_info->user_email;
 	}
-
-
-
-
-
-
-
 
 
 	echo '<h1>Task #8</h1>';
@@ -172,28 +167,35 @@
 	}
 
 	
-	echo '<h1>Task #9</h1>';
+	echo "<h1>Task #9</h1>";
 
-	$query = new WP_Query([
-		'post_type' => 'post',
-		'posts_per_page' => -1,
-		'orderby' => 'title',
-		'order' => 'ASC',
+	$posts = get_posts([
+	'post_type' => 'post',
+	'posts_per_page' => -1,
+	'orderby' => 'title',
+	'order' => 'ASC'
 	]);
 
-	while($query->have_posts()) {
-		$query->the_post();
-		echo '<ol>';
-		echo the_title();
-			echo '<li>';
-			echo get_author_name();
-			echo '<br>';
-			echo the_date();
-			echo '</li>';
-		echo '</ol>';
-		echo '<br>';
-	}
+	?>
+<ol>
 
-?>
+	<?php
+	foreach ($posts as $post) :
+		$post_title = get_the_title();
+		$author_id = get_the_author_meta('ID');
+		$user_info = get_user_by('ID', $author_id);
+		$author_name = $user_info->display_name;
+		$creation_date = get_the_date();
+		?>
+
+		<li>
+			<?= get_the_title() .  ' [' . $author_name . '] ' . ' (' . get_the_date(); . ') ' ?>		
+		</li>
+
+		<?php
+	endforeach;
+	?>
+
+</ol>
 
 <?php get_footer(); ?>
