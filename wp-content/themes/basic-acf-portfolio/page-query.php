@@ -189,7 +189,7 @@
 		?>
 
 		<li>
-			<?= get_the_title() .  ' [' . $author_name . '] ' . ' (' . get_the_date(); . ') ' ?>		
+			<?= $post_title .  ' [' . $author_name . '] ' . ' (' . $creation_date . ') ' ?>		
 		</li>
 
 		<?php
