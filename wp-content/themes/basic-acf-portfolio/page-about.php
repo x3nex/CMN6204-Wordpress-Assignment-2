@@ -20,6 +20,10 @@ the_post(); ?>
         <li class="breadcrumb-item active">About</li>
       </ol>
 
+      <?php  
+        $hero_image = get_field('hero_image');
+      ?>
+      
       <!-- Intro Content -->
       <div class="row">
         <div class="col-lg-6">

@@ -20,7 +20,9 @@ the_post();
     <li class="breadcrumb-item active">Services</li>
   </ol>
 
-
+    <?php  
+  $hero_image = get_field('hero_image');
+  ?>
   <!-- Image Header -->
   <img class="img-fluid rounded mb-4" src="<?= $hero_image['sizes']['large'] ?>" alt="<?= $hero_image['alt'] ?>">
 

@@ -32,7 +32,9 @@ the_post();
     $posts_title = get_the_title();
     ?>
 
-
+    <?php
+    $url = get_field('featured_image')['sizes']['medium_large'];
+    ?>
 
     <div class="row">
       <div class="col-md-7">
