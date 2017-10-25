@@ -33,7 +33,7 @@ the_post();
     ?>
 
     <?php
-    $url = get_field('featured_image')['sizes']['medium_large'];
+    $url = get_field('hero_image')['sizes']['medium_large'];
     ?>
 
     <div class="row">

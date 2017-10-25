@@ -21,10 +21,11 @@ the_post();
   </ol>
 
     <?php  
-  $hero_image = get_field('hero_image');
+  $hero_image = get_field('hero_image')['sizes']['large'];
+  $alt = get_field('hero_image')['alt'];
   ?>
   <!-- Image Header -->
-  <img class="img-fluid rounded mb-4" src="<?= $hero_image['sizes']['large'] ?>" alt="<?= $hero_image['alt'] ?>">
+  <img class="img-fluid rounded mb-4" src="<?= $hero_image ?>" alt="<?= $alt ?>">
 
   <!-- Marketing Icons Section -->
   <div class="row">
