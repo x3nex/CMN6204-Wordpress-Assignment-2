@@ -20,12 +20,12 @@ the_post();
     <li class="breadcrumb-item active">Services</li>
   </ol>
 
-    <?php  
-  $hero_image = get_field('hero_image')['sizes']['large'];
-  $alt = get_field('hero_image')['alt'];
+  <?php  
+    $url = get_field('hero_image')['sizes']['large'];
+    $alt = get_field('hero_image')['alt'];
   ?>
   <!-- Image Header -->
-  <img class="img-fluid rounded mb-4" src="<?= $hero_image ?>" alt="<?= $alt ?>">
+  <img class="img-fluid rounded mb-4" src="<?= $url ?>" alt="<?= $alt ?>">
 
   <!-- Marketing Icons Section -->
   <div class="row">
