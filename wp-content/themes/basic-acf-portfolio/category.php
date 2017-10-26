@@ -44,7 +44,7 @@ the_post();
       </div>
       <div class="col-md-5">
         <h3><?= $posts_title ?></h3>
-        <p><?= excerpt(get_the_content()) ?></p>
+        <!-- <p><?= excerpt(get_the_content()) ?></p> -->
         <a class="btn btn-primary" href="<?= get_permalink() ?>">View Project
           <span class="glyphicon glyphicon-chevron-right"></span>
         </a>

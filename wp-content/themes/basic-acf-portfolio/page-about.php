@@ -42,7 +42,7 @@ the_post(); ?>
 
       <?php
       while ( have_rows('customers') ) : the_row();
-        $url = get_sub_field('logo');
+        $url = get_sub_field('logo')['url'];
         ?>
 
         <div class="col-lg-2 col-sm-4 mb-4">
