@@ -17,7 +17,7 @@ function register_menus() {
 	register_nav_menus([
 		'main-menu' => 'Main Menu for top of the page',
 		
-]);
+	]);
 
 }
 
@@ -70,6 +70,12 @@ function custom_scripts () {
 // $name, $width, $height, $crop
 add_image_size('Portfolio Featured', 700, 500, true);
 add_image_size('Hero', 1920, 1080, true);
+
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyDKWchuR5oai7TOXgchbC1aXxict3gQlSU');
+}
+add_action('acf/init', 'my_acf_init');
 
 
 ?>
